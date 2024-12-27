@@ -1,11 +1,76 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import Pheader from "../components/Pheader.astro"
+import json from "../content/global.json"
+var tag = json["tags"][Math.floor(Math.random() * 3)];
+var tag_length = tag.length;
 ---
 <html lang="zh_tw">
-	<title>
-
-	</title>
+	<head>
+		<title>PepperSauce | 個人網站</title>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+	</head>
 	<body>
-		<Pheader />
+		<Navbar social="dc"/>
+		<h1 class="text-4ch font-bold text-white text-center">
+			嗨，我是 <span class="text-green-300">PepperSauce</span>
+		</h1>
+			<div class="tags">&lt;/&gt;{tag}</div>
 	</body>
+	<style define:vars={{tag_length}}>
+		body {
+  		  background-color: #111111;
+  		  background-image: 
+    	  linear-gradient(to right, rgba(100, 100, 100, 0.1) 1px, transparent 1px),
+    	  linear-gradient(to bottom, rgba(100, 100, 100, 0.1) 1px, transparent 1px);
+  	      background-size: 20px 20px; /* 網格大小 */
+		}
+
+		.tags {
+		  display: flex;
+		  color: #60656C;
+		  font-size: x-small;
+		  font-family: monospace;
+		  width: 3ch;
+		  max-width: var(--tag_length);
+		  justify-self: center;
+		  align-items: center;
+
+		  word-break: keep-all;
+		  white-space: nowrap;
+		  
+		  overflow: hidden;
+		  position: relative;
+		  animation: 2s typing forwards;
+		}
+
+		.tags::after{
+		  content: '';
+		  display: inline-block;
+		  position: absolute;
+		  width: 0.5px;
+		  height: 6rem;
+		  opacity: 0;
+		  background-color: #60656C;
+		  border-radius: 2px;
+		  right: 0px;
+		  animation: 0.9s cursor steps(20, jump-none) 2;
+		}
+
+		@keyframes cursor {
+			from{
+			  opacity: 1;
+			} to {
+			  opacity: 0;
+			}
+		}
+
+		@keyframes typing {
+			from{
+			  width: 3ch;
+			} to {
+			  width: 27ch;
+			}
+		}
+	</style>
 </html>
