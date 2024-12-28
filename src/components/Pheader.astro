@@ -1,7 +1,10 @@
 ---
-import json from '../content/global.json';
-const zh_tw = json["zh_tw"];
+import Navbar from "./Navbar.astro";
 ---
 
-
-
+<header class="bg-black text-white h-11 flex items-center justify-center">
+    <text class="text-white text-xs mr-48">PepperSauce</text>
+    <a href="about" style="color:#8f9297;" class="text-xs ml-32 mr-4">關於</a>
+    <a href="contact" style="color:#8f9297;" class="text-xs mr-4">聯絡</a>
+    <a href="portfolios_show" style="color:#8f9297;" class="text-xs">作品集</a>
+</header>

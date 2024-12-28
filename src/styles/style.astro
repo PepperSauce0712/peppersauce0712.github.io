@@ -1,0 +1,52 @@
+---
+
+---
+<style>
+    
+		.tags {
+		  display: flex;
+		  color: #60656C;
+		  font-size: x-small;
+		  font-family: monospace;
+		  width: 3ch;
+		  max-width: var(--tag_length);
+		  justify-self: center;
+		  align-items: center;
+
+		  word-break: keep-all;
+		  white-space: nowrap;
+		  
+		  overflow: hidden;
+		  position: relative;
+		  animation: 2s typing forwards;
+		}
+
+		.tags::after{
+		  content: '';
+		  display: inline-block;
+		  position: absolute;
+		  width: 0.5px;
+		  height: 6rem;
+		  opacity: 0;
+		  background-color: #60656C;
+		  border-radius: 2px;
+		  right: 0px;
+		  animation: 0.9s cursor steps(20, jump-none) 2;
+		}
+
+		@keyframes cursor {
+			from{
+			  opacity: 1;
+			} to {
+			  opacity: 0;
+			}
+		}
+
+		@keyframes typing {
+			from{
+			  width: 3ch;
+			} to {
+			  width: 25ch;
+			}
+		}
+</style>
