@@ -1,18 +1,11 @@
 ---
-import Pfooter from "../components/Pfooter.astro"
-import Pheader from "../components/Pheader.astro"
 ---
-
 <html lang="zh_tw">
 	<head>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 	</head>
-	<body>
-	<div class="flex flex-col min-h-screen">
-		<Pheader/>
-		<Pfooter/>
-	</div>
-
+	<body class="flex flex-col min-h-screen">
+		<slot/>
 	</body>
 	<style>
 		body {
