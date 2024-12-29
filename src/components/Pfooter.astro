@@ -1,5 +1,13 @@
 ---
+import Navbar from "./Navbar.astro";
 ---
-<div class="flex flex-col min-h-screen">
-    <footer></footer>
-</div>
+<div class="mb-auto"></div> <!--讓footer置底的東西別動-->
+<footer style="border-top-width: 0.5px; border-color: #323335;" class="h-20 border-solid opacity-65 flex justify-evenly items-center">
+    <div class="flex flex-row">
+        <Navbar social="ig" cls="mr-3"/>
+        <Navbar social="dc" cls="mr-3"/>
+        <Navbar social="github" cls=""/>
+    </div>
+    <text></text>
+    <text style="font-size: 11px;" class="text-zinc-500 opacity-100">Copyright © 2025 PepperSauce. All rights reserved.</text>
+</footer>
