@@ -1,17 +1,12 @@
 ---
-import Pfooter from "../components/Pfooter.astro";
-import Pheader from "../components/Pheader.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
 ---
-<html lang="zh_tw">
-	<DefaultWebsite/>
+<html lang="en">
 	<head>
-		<title>PepperSauce | 聯絡我</title>
+		<title>PepperSauce | 聯絡</title>
 	</head>
-	<body>
-		<Pheader/>
-		<div class="flex flex-col items-center flex-grow">
+	<DefaultWebsite>
+		<div class="flex flex-col items-center min-h-screen">
 		</div>
-		<Pfooter/>
-	</body>
+	</DefaultWebsite>
 </html>

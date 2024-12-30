@@ -1,33 +1,26 @@
 ---
-import Pfooter from "../components/Pfooter.astro";
-import Pheader from "../components/Pheader.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
 import { Image } from 'astro:assets';
 ---
-<html lang="zh_tw">
-	<DefaultWebsite/>
+<html lang="en">
 	<head>
 		<title>PepperSauce | 個人網頁</title>
 	</head>
-	<body>
-		<Pheader/>
-
+	<DefaultWebsite>
 		<div class="h-32"></div>
-		<div class="flex flex-col items-center flex-grow">
+		<div class="flex flex-col items-center min-h-screen">
 			<Image
-			src="/PepperWebsite/images/PepperSauce_icon.jpg"
+			src="/images/PepperSauce_icon.jpg"
 			alt="PepperSauce的頭貼"
-			width="90"
-			height="90"
-		  	class="rounded-full outline outline-1 outline-neutral-700"
-	  		/>
+			width="150"
+			height="150"
+			  class="rounded-full outline outline-1 outline-neutral-700"
+			  />
 			<br>
-			<text class="text-white font-bold text-xl h-8">嗨，我是
+			<text class="text-white font-bold text-2xl h-10">嗨，我是
 				<text class="text-green-300">PepperSauce</text>
 			</text>
-			<text class="text-zinc-500 text-xs">&lt;/&gt;Unreal Engine VFXer</text>
+			<text class="text-zinc-500 text-base">&lt;/&gt;Unreal Engine VFXer</text>
 		</div>
-		
-		<Pfooter/>
-	</body>
+	</DefaultWebsite>
 </html>

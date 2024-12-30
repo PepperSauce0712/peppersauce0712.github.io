@@ -1,30 +1,22 @@
 ---
+import link from "../content/global.json";
 const { social, cls } = Astro.props;
-let icon, link;
+let icon;
 
-if (social === "ig"){
-    icon = "fi fi-brands-instagram " + cls;
-    link = "https://www.instagram.com/po_shan.0611/";
-}
-if (social === "dc"){
-    icon = "fi fi-brands-discord " + cls;
-    link = "https://discord.gg/SHydprvSDJ";
-}
-if (social === "github"){
-    icon = "fi fi-brands-github " + cls;
-    link = "https://github.com/PepperSauce0712";
-}
+if (social === "ig") icon = "fi fi-brands-instagram " + cls;
+if (social === "dc") icon = "fi fi-brands-discord " + cls;
+if (social === "github") icon = "fi fi-brands-github " + cls;
 ---
-<button class="social">
+<button class={social}>
     <i style="color:#4b4c4e;" class={icon}></i>
 </button>
 
-<script define:vars={{link}}>
-    const buttons = document.querySelectorAll("button.social");
-    
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        window.location.href = link;
-      });
-    });
+<script define:vars={{social, link}}>
+    const button = document.querySelector("button." + social);
+
+    if (button) {
+        button.addEventListener("click", () => {
+            window.open(link["link"][social], "_blank");
+        });
+    }
 </script>
