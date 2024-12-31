@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
     integrations: [tailwind({})],
     site: 'https://peppersauce0712.github.io/',
-    base: '/',
+    base: '/PepperWebsite/',
 });
