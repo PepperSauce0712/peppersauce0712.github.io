@@ -12,11 +12,11 @@ if (social === "github") icon = "fi fi-brands-github " + cls;
 </button>
 
 <script define:vars={{social, link}}>
-    const button = document.querySelector("button." + social);
+    const buttons = document.querySelectorAll("button." + social);
 
-    if (button) {
+    buttons.forEach((button) => {
         button.addEventListener("click", () => {
             window.open(link["link"][social], "_blank");
         });
-    }
+    });
 </script>
