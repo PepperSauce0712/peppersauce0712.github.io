@@ -1,26 +1,42 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
 import { Image } from 'astro:assets';
 ---
 <html lang="en">
 	<head>
 		<title>PepperSauce | 個人網頁</title>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 	</head>
 	<DefaultWebsite>
-		<div class="h-32"></div>
+		<div class="h-36"></div>
 		<div class="flex flex-col items-center min-h-screen">
 			<Image
 			src="/images/PepperSauce_icon.jpg"
 			alt="PepperSauce的頭貼"
 			width="150"
 			height="150"
-			  class="rounded-full outline outline-1 outline-neutral-700"
-			  />
-			<br>
-			<text class="text-white font-bold text-2xl h-10">嗨，我是
+			class="rounded-full outline outline-1 outline-neutral-700"
+			/>
+			<div class="h-8"></div>
+			<text class="text-white font-bold text-3xl h-12">嗨，我是
 				<text class="text-green-300">PepperSauce</text>
 			</text>
-			<text class="text-zinc-500 text-base">&lt;/&gt;Unreal Engine VFXer</text>
+			<text class="text-neutral-400 text-base">&lt;/&gt;Unreal Engine VFXer</text>
+			<text class="text-neutral-400 text-base my-20">「但行好事，莫問前程。」</text>
+			<div class="h-20"></div>
+			<div class="flex flex-row gap-5">
+				<Navbar social="ig" cls="text-2xl"/>
+				<Navbar social="dc" cls="text-2xl"/>
+				<Navbar social="github" cls="text-2xl"/>
+			</div>
+			<button class="bg-white rounded-full w-36 h-10 my-3 flex flex-row justify-center gap-2"
+					onclick="window.location.href='/about'">
+				<i class="fi fi-rr-diploma text-xl my-2.5"></i>
+				<text class="font-bold my-2">查看履歷</text>
+				<i class="fi fi-rr-arrow-right my-2.5"></i>
+			</button>
 		</div>
 	</DefaultWebsite>
 </html>
