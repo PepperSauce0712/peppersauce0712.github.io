@@ -1,15 +1,19 @@
 ---
 import Pfooter from "../components/Pfooter.astro";
 import Pheader from "../components/Pheader.astro";
+import link from "../content/global.json";
 
 ---
 <html lang="en">
 	<head>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+		<link rel="icon" href="/public/images/favicon.ico">
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Pheader/>
-		<slot></slot>
+		<div class="flex flex-col items-center min-h-screen">
+			<slot></slot>
+        </div>
 		<Pfooter/>
 	</body>
 	<style>
@@ -21,4 +25,25 @@ import Pheader from "../components/Pheader.astro";
   	      background-size: 35px 35px; /* 網格大小 */
 		}
 	</style>
+	
+	<script define:vars={{link}}>
+    	const ig_buttons = document.querySelectorAll("button.ig");
+		const dc_buttons = document.querySelectorAll("button.dc");
+		const github_buttons = document.querySelectorAll("button.github");
+    	ig_buttons.forEach((button) => {
+        	button.addEventListener("click", () => {
+            	window.open(link["link"]["ig"], "_blank");
+        	});
+    	});
+		dc_buttons.forEach((button) => {
+        	button.addEventListener("click", () => {
+            	window.open(link["link"]["dc"], "_blank");
+        	});
+    	});
+		github_buttons.forEach((button) => {
+        	button.addEventListener("click", () => {
+            	window.open(link["link"]["github"], "_blank");
+        	});
+    	});
+	</script>
 </html>
