@@ -1,0 +1,25 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<title>{frontmatter.title}</title>
+		<link rel="icon" href="/PepperWebsite/images/favicon.ico">
+	</head>
+	<body>
+        <h1>{frontmatter.title}</h1>
+        <p>作者：{frontmatter.author}</p>
+        <p>日期：{frontmatter.pubDate}</p>
+        <p><em>{frontmatter.description}</em></p>
+        <slot/>
+	</body>
+	<style>
+		body {
+  		  background-color: #090909;
+  		  background-image: 
+    	  linear-gradient(to right, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px),
+    	  linear-gradient(to bottom, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px);
+  	      background-size: 35px 35px; /* 網格大小 */
+		}
+	</style>
+</html>

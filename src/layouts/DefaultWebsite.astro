@@ -2,12 +2,13 @@
 import Pfooter from "../components/Pfooter.astro";
 import Pheader from "../components/Pheader.astro";
 import link from "../content/global.json";
-
+const { pageTitle } = Astro.props;
 ---
 <html lang="en">
 	<head>
+		<title>{pageTitle}</title>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-		<link rel="icon" href="/public/images/favicon.ico">
+		<link rel="icon" href="/PepperWebsite/images/favicon.ico">
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Pheader/>
@@ -18,7 +19,7 @@ import link from "../content/global.json";
 	</body>
 	<style>
 		body {
-  		  background-color: #080808;
+  		  background-color: #090909;
   		  background-image: 
     	  linear-gradient(to right, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px),
     	  linear-gradient(to bottom, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px);
