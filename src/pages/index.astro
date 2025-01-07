@@ -33,7 +33,7 @@ import { Image } from 'astro:assets';
 				<Navbar social="github" cls="text-2xl"/>
 			</div>
 			<button class="bg-white rounded-full w-36 h-10 my-3 flex flex-row justify-center gap-2"
-					onclick="window.location.href='/PepperWebsite/about'">
+					onclick="window.location.href='/PepperWebsite/'">
 				<i class="fi fi-rr-diploma text-xl my-2.5"></i>
 				<text class="font-bold my-2">查看經歷</text>
 				<i class="fi fi-rr-arrow-right my-2.5"></i>
@@ -42,7 +42,6 @@ import { Image } from 'astro:assets';
 
 		<!-- 關於我 -->
 		<div class="h-24" id="about"></div>
-		<div id="about"></div>
         <h1 class="text-3xl text-white font-bold">關於我</h1>
         <text class="text-lg text-neutral-400 my-2">一位興趣多樣卻樣樣不精的學生</text>
         <div class="h-20"></div>
@@ -112,10 +111,35 @@ import { Image } from 'astro:assets';
                 <Aboutstack icon="/PepperWebsite/ui_icons/vscode-svgrepo-com.svg", name="Vscode"></Aboutstack>
             </div>
         </div>
-        <div class="h-60"></div>
 
 		<!-- 作品集 -->
-		<div id="portfolios_show"></div>
+        <div class="h-40" id="portfolios_show" ></div>
+        <div class="text-3xl text-white font-bold">作品集</div>
+
+        <div class="h-20"></div>
+        <div class="bg-neutral-900 w-[55rem] h-[40rem] flex flex-col justify-center rounded-xl p-6">
+            <text class="text-white text-3xl font-bold">Unreal Engine 特效〈次元斬〉展示</text>
+            <text class="text-neutral-300 text-lg my-3">使用 Unreal Engine 中的 Niagara 系統製作特效。</text>
+            <div class="h-4"></div>
+            <iframe src="https://youtu.be/HpsbraZdZIU?si=roYSYXdgb-l8xXHV" width="100%" height="100%" allowfullscreen></iframe>
+        </div>
+
+        <div class="h-20"></div>
+        <div class="bg-neutral-900 w-[55rem] h-[40rem] flex flex-col justify-center rounded-xl p-6">
+            <text class="text-white text-3xl font-bold">Unreal Engine 特效〈次元斬〉展示</text>
+            <text class="text-neutral-300 text-lg my-3">使用 Unreal Engine 中的 Niagara 系統製作特效。</text>
+            <div class="h-4"></div>
+            <iframe src="https://youtu.be/HpsbraZdZIU?si=roYSYXdgb-l8xXHV" width="100%" height="100%" allowfullscreen></iframe>
+        </div>
+
+        <div class="h-20"></div>
+        <div class="bg-neutral-900 w-[55rem] h-[40rem] flex flex-col justify-center rounded-xl p-6">
+            <text class="text-white text-3xl font-bold">Unreal Engine 特效〈次元斬〉展示</text>
+            <text class="text-neutral-300 text-lg my-3">使用 Unreal Engine 中的 Niagara 系統製作特效。</text>
+            <div class="h-4"></div>
+            <iframe src="https://youtu.be/HpsbraZdZIU?si=roYSYXdgb-l8xXHV" width="100%" height="100%" allowfullscreen></iframe>
+        </div>
+
 		<!-- 聯絡我 -->
 		<div id="contact"></div>
 	</DefaultWebsite>
