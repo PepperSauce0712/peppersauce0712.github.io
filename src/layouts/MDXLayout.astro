@@ -3,15 +3,17 @@ const { frontmatter } = Astro.props;
 ---
 <html lang="en">
 	<head>
-		<title>{frontmatter.title}</title>
+		<title>PepperSauce | {frontmatter.title}</title>
 		<link rel="icon" href="/PepperWebsite/images/favicon.ico">
 	</head>
 	<body>
-        <h1>{frontmatter.title}</h1>
-        <p>作者：{frontmatter.author}</p>
-        <p>日期：{frontmatter.pubDate}</p>
-        <p><em>{frontmatter.description}</em></p>
-        <slot/>
+		<div class="flex flex-col justify-center items-center">
+			<div class="h-24"></div>
+			<h1 class="text-3xl text-white">{frontmatter.title}</h1>
+			<text class="text-lg text-white">{frontmatter.pubDate.toString().slice(0, 10)}</text>
+			<text class="text-3xl text-white">{frontmatter.description}</text>
+			<slot/>
+		</div>
 	</body>
 	<style>
 		body {
