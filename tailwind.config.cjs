@@ -2,8 +2,8 @@
 module.exports = {
     content: [
       './src/pages/*.astro',
+      './src/layouts/*.astro',
       './src/components/*.astro',
-      './src/index.html'
     ],
     theme: {
         extend: {
