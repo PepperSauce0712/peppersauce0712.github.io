@@ -1,146 +1,86 @@
 ---
-import Aboutstack from "../components/Aboutstack.astro";
+import Logoimage from "../components/Logoimage.astro";
 import Navbar from "../components/Navbar.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
 import { Image } from 'astro:assets';
 ---
-<html lang="en">
-	<head>
-		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-	</head>
-	<DefaultWebsite pageTitle="PepperSauce | 個人網頁">
-		<!-- 首頁 -->
-		<div class="h-36"></div>
-		<div class="flex flex-col items-center min-h-screen">
-			<Image
-			src="/PepperWebsite/images/PepperSauce_icon.jpg"
-			alt="PepperSauce的頭貼"
-			width="150"
-			height="150"
-			class="rounded-full outline outline-1 outline-neutral-700"
-			/>
-			<div class="h-8"></div>
-			<text class="text-white font-bold text-3xl h-12">嗨，我是
-				<text class="text-green-300">PepperSauce</text>
-			</text>
-			<text class="text-neutral-400 text-base">&lt;/&gt;Unreal Engine VFXer</text>
-			<text class="text-neutral-400 text-base my-20">「但行好事，莫問前程。」</text>
-			<div class="h-20"></div>
-			<div class="flex flex-row gap-5">
-				<Navbar social="ig" cls="text-2xl"/>
-				<Navbar social="dc" cls="text-2xl"/>
-				<Navbar social="github" cls="text-2xl"/>
-			</div>
-			<button class="bg-white rounded-full w-36 h-10 my-3 flex flex-row justify-center gap-2"
-					onclick="window.location.href='/PepperWebsite/'">
-				<i class="fi fi-rr-diploma text-xl my-2.5"></i>
-				<text class="font-bold my-2">查看經歷</text>
-				<i class="fi fi-rr-arrow-right my-2.5"></i>
-			</button>
-		</div>
+<DefaultWebsite pageTitle="PepperSauce | 個人網頁">
+    <!-- 首頁 -->
+    <section class="flex flex-col items-center min-h-screen">
+        <Image
+        src="/images/PepperSauce_icon.jpg"
+        alt="PepperSauce的頭貼"
+        width="150"
+        height="150"
+        class="rounded-full outline outline-1 outline-neutral-700"
+        />
+        <p class="text-white font-bold text-3xl h-12">嗨，我是
+            <span class="text-green-300">PepperSauce</span>
+        </p>
+        <p class="text-neutral-400 text-base">&lt;/&gt;Unreal Engine VFXer</p>
+        <p class="text-neutral-400 text-base my-20">「但行好事，莫問前程。」</p>
+        <div class="flex flex-row gap-5">
+            <Navbar social="ig" cls="text-2xl"/>
+            <Navbar social="dc" cls="text-2xl"/>
+            <Navbar social="github" cls="text-2xl"/>
+        </div>
+        <button class="bg-white rounded-full w-36 h-10 my-3 flex flex-row justify-center gap-2"
+                onclick="window.location.href='/'">
+            <i class="fi fi-rr-diploma text-xl my-2.5"></i>
+            <p class="font-bold my-2">查看經歷</p>
+            <i class="fi fi-rr-arrow-right my-2.5"></i>
+        </button>
+    </section>
+    <!-- 首頁 -->
 
-		<!-- 關於我 -->
-		<div class="h-24" id="about"></div>
-        <h1 class="text-3xl text-white font-bold">關於我</h1>
-        <text class="text-lg text-neutral-400 my-2">一位興趣多樣卻樣樣不精的學生</text>
-        <div class="h-20"></div>
+    <!-- 關於我 -->
+    <p class="text-3xl text-white font-bold">關於我</p>
+    <p class="text-lg text-neutral-400 my-2">一位興趣多樣卻樣樣不精的學生</p>
 
-        <!-- 技能簡介 -->
-        <div class="grid grid-cols-2 gap-8">
-            <div class="bg-neutral-900 w-96 h-60 rounded-2xl grid grid-cols-4 grid-rows-3 p-6 gap-3">
-                <div class="bg-neutral-800 w-14 h-14 rounded-2xl flex justify-center items-center">
-                    <img src="/PepperWebsite/ui_icons/unreal-engine-svgrepo-com.svg" height="40" width="40">
+    <!-- 技能栈 -->
+    <p class="text-3xl text-white font-bold">技術栈</p>
+    <section class="grid grid-cols-4 gap-x-10 gap-y-10">
+        <p class="text-white font-bold text-lg text-center">前端開發</p>
+        <p class="text-white font-bold text-lg text-center">後端開發</p>
+        <p class="text-white font-bold text-lg text-center">遊戲開發</p>
+        <p class="text-white font-bold text-lg text-center">其他</p>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
+            <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++"></Logoimage>
+            <Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python"></Logoimage>
+            <Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
+        </div>
+    </section>
+
+    <!-- 作品集 -->
+    <p class="text-3xl text-white font-bold">作品集</p>
+    <section class= "grid grid-cols-2 auto-rows gap-12">
+        <div class="bg-neutral-900 w-[33rem] h-[30rem] flex flex-col rounded-xl p-4 border border-neutral-700">
+            <iframe src="https://www.youtube.com/embed/Dnz-BTz9eDU" allow="autoplay; encrypted-media" allowfullscreen class="rounded-xl w-full h-72"></iframe>
+            <p class="text-2xl text-white h-9">次元斬</p>
+            <p class="text-base text-neutral-400 h-24">
+                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+            </p>
+            <div class="flex flex-row justify-between">
+                <div class="flex flex-row gap-2">
+                    <div class="bg-neutral-800 rounded-full p-1.5 text-white text-sm border border-teal-400">Unreal Engine</div>
+                    <div class="tags border-blue-400">VFX</div>
+                    <div class="tags border-green-400">Imitation</div>
                 </div>
-                <text class="text-white font-bold text-xl my-3 grid col-span-3">虛幻引擎特效</text>
-                <text class="text-neutral-300 text-base col-span-4">
-                    使用 Unreal Engine 中的 Niagara 系統製作特效。
-                </text>
-            </div>
-            <div class="bg-neutral-900 w-96 h-60 rounded-2xl grid grid-cols-4 grid-rows-3 p-6 gap-3">
-                <div class="bg-neutral-800 w-14 h-14 rounded-2xl flex justify-center items-center">
-                    <img src="/PepperWebsite/ui_icons/lock-svgrepo-com.svg" height="35" width="35">
-                </div>
-                <text class="text-white font-bold text-xl my-3 grid col-span-3">街舞 Locking</text>
-                <text class="text-neutral-300 text-base col-span-4">
-                    Locking。
-                </text>
-            </div>
-            <div class="bg-neutral-900 w-96 h-60 rounded-2xl grid grid-cols-4 grid-rows-3 p-6 gap-3">
-                <div class="bg-neutral-800 w-14 h-14 rounded-2xl flex justify-center items-center">
-                    <img src="/PepperWebsite/ui_icons/coding-svgrepo-com.svg" height="38" width="38">
-                </div>
-                <text class="text-white font-bold text-xl my-3 grid col-span-3">全端開發</text>
-                <text class="text-neutral-300 text-base col-span-4">
-                    C++/Python/Javascript。
-                </text>
-            </div>
-            <div class="bg-neutral-900 w-96 h-60 rounded-2xl grid grid-cols-4 grid-rows-3 p-6 gap-3">
-                <div class="bg-neutral-800 w-14 h-14 rounded-2xl flex justify-center items-center">
-                    <img src="/PepperWebsite/ui_icons/game-controller-gamepad-svgrepo-com.svg" height="35" width="35">
-                </div>
-                <text class="text-white font-bold text-xl my-3 grid col-span-3">虛幻引擎特效</text>
-                <text class="text-neutral-300 text-base col-span-4">
-                    使用 Unreal Engine 獨立製作遊戲。
-                </text>
+                <button onclick="window.location.href='/'">
+                    <img src="/ui_icons/exit.svg" height="28" width="28">
+                </button>   
             </div>
         </div>
+    </section>
 
-        <!-- 技能栈 -->
-        <div class="h-52"></div>
-        <div class="text-3xl text-white font-bold">技術栈</div>
-        <div class="h-20"></div>
-        <div class="grid grid-cols-4 gap-x-10 gap-y-10">
-            <div class="text-white font-bold text-lg text-center">前端開發</div>
-            <div class="text-white font-bold text-lg text-center">後端開發</div>
-            <div class="text-white font-bold text-lg text-center">遊戲開發</div>
-            <div class="text-white font-bold text-lg text-center">其他</div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Aboutstack icon="/PepperWebsite/ui_icons/astro-svgrepo-com.svg", name="Astro"></Aboutstack>
-                <Aboutstack icon="/PepperWebsite/ui_icons/tailwind-css-svgrepo-com.svg", name="Tailwind"></Aboutstack>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Aboutstack icon="/PepperWebsite/ui_icons/cpp-svgrepo-com.svg", name="C++"></Aboutstack>
-                <Aboutstack icon="/PepperWebsite/ui_icons/python-127-svgrepo-com.svg", name="Python"></Aboutstack>
-                <Aboutstack icon="/PepperWebsite/ui_icons/javascript-svgrepo-com.svg", name="Javascript"></Aboutstack>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Aboutstack icon="/PepperWebsite/ui_icons/unreal-engine-svgrepo-com.svg", name="Unreal"></Aboutstack>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Aboutstack icon="/PepperWebsite/ui_icons/vscode-svgrepo-com.svg", name="Vscode"></Aboutstack>
-            </div>
-        </div>
-
-		<!-- 作品集 -->
-        <div class="h-40" id="portfolios_show"></div>
-        <div class="text-3xl text-white font-bold">作品集</div>
-        <div class="h-32"></div>
-        
-        <div class= "grid grid-cols-2 grid-rows-auto gap-12">
-            <div class="bg-neutral-900 w-[33rem] h-[30rem] flex flex-col rounded-xl p-4 border border-neutral-700">
-                <iframe width="100%" height="290rem" src="https://www.youtube.com/embed/Dnz-BTz9eDU" allow="autoplay; encrypted-media" allowfullscreen
-                class="rounded-xl"></iframe>
-                <div class="h-2"></div>
-                <text class="text-2xl text-white h-9">次元斬</text>
-                <text class="text-base text-neutral-400 w-30 h-24">
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                </text>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-2">
-                        <div class="bg-neutral-800 rounded-full p-1.5 text-white text-sm border border-teal-400">Unreal Engine</div>
-                        <div class="bg-neutral-800 rounded-full p-1.5 text-white text-sm border border-blue-400">VFX</div>
-                        <div class="bg-neutral-800 rounded-full p-1.5 text-white text-sm border border-green-400">Imitation</div>
-                    </div>
-                    <button onclick="window.location.href='/PepperWebsite/'">
-                        <img src="/PepperWebsite/ui_icons/exit.svg" height="28" width="28">
-			        </button>   
-                </div>
-            </div>
-        </div>
-
-        <div class="h-40"></div>
-	</DefaultWebsite>
-</html>
+</DefaultWebsite>

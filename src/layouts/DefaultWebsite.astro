@@ -1,4 +1,5 @@
 ---
+// layouts/DefaultWebsite.astro
 import Pfooter from "../components/Pfooter.astro";
 import Pheader from "../components/Pheader.astro";
 import link from "../content/global.json";
@@ -7,44 +8,47 @@ const { pageTitle } = Astro.props;
 <html lang="en">
 	<head>
 		<title>{pageTitle}</title>
-		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-		<link rel="icon" href="/PepperWebsite/images/favicon.ico">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+		  rel="stylesheet"
+		  href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+		/>
+		<link rel="icon" href="/images/favicon.ico" />
+		<link rel="stylesheet" href="/styles/global.css" />
 	</head>
-	<body class="flex flex-col">
-		<Pheader/>
-		<div class="flex flex-col items-center min-h-screen">
-			<slot></slot>
-        </div>
-		<Pfooter/>
-	</body>
-	<style>
-		body {
-  		  background-color: #090909;
-  		  background-image: 
-    	  linear-gradient(to right, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px),
-    	  linear-gradient(to bottom, rgba(130, 130, 130, 0.1) 0.5px, transparent 1px);
-  	      background-size: 35px 35px; /* 網格大小 */
-		}
-	</style>
+	<body class="flex flex-col bg-neutral-950 text-white min-h-screen">
+		<Pheader />
+		<main class="flex flex-col items-center flex-grow px-4">
+		  <slot />
+		</main>
+		<Pfooter />
 	
-	<script define:vars={{link}}>
-    	const ig_buttons = document.querySelectorAll("button.ig");
-		const dc_buttons = document.querySelectorAll("button.dc");
-		const github_buttons = document.querySelectorAll("button.github");
-    	ig_buttons.forEach((button) => {
-        	button.addEventListener("click", () => {
-            	window.open(link["link"]["ig"], "_blank");
-        	});
-    	});
-		dc_buttons.forEach((button) => {
-        	button.addEventListener("click", () => {
-            	window.open(link["link"]["dc"], "_blank");
-        	});
-    	});
-		github_buttons.forEach((button) => {
-        	button.addEventListener("click", () => {
-            	window.open(link["link"]["github"], "_blank");
-        	});
-    	});
-	</script>
+		<script type="module" define:vars={{ link }}>
+		  const bindings = {
+			ig: link.link.ig,
+			dc: link.link.dc,
+			github: link.link.github,
+		  };
+		  for (const key in bindings) {
+			document.querySelectorAll(`button.${key}`).forEach((btn) => {
+			  btn.addEventListener("click", () => {
+				window.open(bindings[key], "_blank");
+			  });
+			});
+		  }
+		</script>
+	
+		<style>
+		  body {
+			background-image: linear-gradient(
+				to right,
+				rgba(130, 130, 130, 0.05) 1px,
+				transparent 1px
+			  ),
+			  linear-gradient(to bottom, rgba(130, 130, 130, 0.05) 1px, transparent 1px);
+			background-size: 35px 35px;
+		  }
+		</style>
+	  </body>
 </html>
