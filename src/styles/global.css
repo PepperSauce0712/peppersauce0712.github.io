@@ -5,3 +5,6 @@
 .tags {
     @apply bg-neutral-800 rounded-full p-1.5 text-white text-sm border;
 }
+.btn--secondary {
+    @apply bg-slate-100 text-slate-900;
+}  

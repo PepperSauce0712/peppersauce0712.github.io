@@ -1,0 +1,31 @@
+---
+import Logoimage from "../components/Logoimage.astro";
+import DefaultWebsite from "../layouts/DefaultWebsite.astro";
+import { Image } from 'astro:assets';
+---
+<DefaultWebsite pageTitle="PepperSauce | 關於">
+    <!-- 技能栈 -->
+    <p class="text-3xl text-white font-bold">技術栈</p>
+    <section class="grid grid-cols-4 gap-x-10 gap-y-10">
+        <p class="text-white font-bold text-lg text-center">前端開發</p>
+        <p class="text-white font-bold text-lg text-center">後端開發</p>
+        <p class="text-white font-bold text-lg text-center">遊戲開發</p>
+        <p class="text-white font-bold text-lg text-center">其他</p>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
+            <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++"></Logoimage>
+            <Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python"></Logoimage>
+            <Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal"></Logoimage>
+        </div>
+        <div class="grid grid-cols-2 gap-8 grid-rows-3">
+            <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
+        </div>
+    </section>
+
+</DefaultWebsite>
