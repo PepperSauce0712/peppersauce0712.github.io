@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind({}), mdx()],
-    site: 'https://peppersauce0712.github.io/',
+    site: 'https://PepperSauce0712.github.io/',
     base: '',
     publicDir: './public',
 });
