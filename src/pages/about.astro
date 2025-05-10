@@ -1,30 +1,60 @@
 ---
 import Logoimage from "../components/Logoimage.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
+import { Image } from 'astro:assets';
 ---
 <DefaultWebsite pageTitle="PepperSauce | 關於">
-    <!-- 技能栈 -->
-    <p class="text-3xl text-white font-bold">技術栈</p>
-    <section class="grid grid-cols-4 gap-x-10 gap-y-10">
-        <p class="text-white font-bold text-lg text-center">前端開發</p>
-        <p class="text-white font-bold text-lg text-center">後端開發</p>
-        <p class="text-white font-bold text-lg text-center">遊戲開發</p>
-        <p class="text-white font-bold text-lg text-center">其他</p>
-        <div class="grid grid-cols-2 gap-8 grid-rows-3">
-            <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
-            <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
+
+    <!-- 自我介紹 -->
+    <section class="flex flex-row bg-neutral-900 rounded-2xl gap-x-6 w-1/2 p-8 mt-60">
+        <div class="flex flex-none justify-center w-1/5">
+            <Image
+            src="/images/PepperSauce_icon.jpg"
+            alt="PepperSauce的頭貼"
+            width="300"
+            height="200"
+            class="rounded-full"
+            />
         </div>
-        <div class="grid grid-cols-2 gap-8 grid-rows-3">
-            <Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++"></Logoimage>
-            <Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python"></Logoimage>
-            <Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript"></Logoimage>
-        </div>
-        <div class="grid grid-cols-2 gap-8 grid-rows-3">
-            <Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal"></Logoimage>
-        </div>
-        <div class="grid grid-cols-2 gap-8 grid-rows-3">
-            <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
-        </div>
+
+        <p class="flex-auto text-white text-xl">
+            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
+            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
+            <br>
+            <br>
+            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
+            <br>
+            <br>
+            <br>
+            <span class="text-white text-base italic">「若心有所嚮，何懼道阻且長。」</span>
+        </p>
     </section>
+
+    <!-- 技能栈 -->
+    <div class="flex flex-col items-center">
+        <p class="text-3xl text-white font-bold mt-24">技術栈</p>
+
+        <section class="grid grid-cols-4 gap-x-10 gap-y-10 mt-8">
+            <p class="text-white font-bold text-lg text-center">前端開發</p>
+            <p class="text-white font-bold text-lg text-center">後端開發</p>
+            <p class="text-white font-bold text-lg text-center">遊戲開發</p>
+            <p class="text-white font-bold text-lg text-center">其他</p>
+            <div class="grid grid-cols-2 gap-8 grid-rows-3">
+                <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
+                <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
+            </div>
+            <div class="grid grid-cols-2 gap-8 grid-rows-3">
+                <Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++"></Logoimage>
+                <Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python"></Logoimage>
+                <Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript"></Logoimage>
+            </div>
+            <div class="grid grid-cols-2 gap-8 grid-rows-3">
+                <Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal"></Logoimage>
+            </div>
+            <div class="grid grid-cols-2 gap-8 grid-rows-3">
+                <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
+            </div>
+        </section>
+    </div>
 
 </DefaultWebsite>
