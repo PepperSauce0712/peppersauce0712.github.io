@@ -6,35 +6,40 @@ import { Image } from 'astro:assets';
 <DefaultWebsite pageTitle="PepperSauce | 關於">
 
     <!-- 自我介紹 -->
-    <section class="flex flex-row bg-neutral-900 rounded-2xl gap-x-6 w-1/2 p-8 mt-60">
-        <div class="flex flex-none justify-center w-1/5">
+    <section class="flex flex-col items-center w-2/5 mt-60">
+        <p class="text-3xl text-white font-bold">自我介紹</p>
+        <div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8">
             <Image
             src="/images/PepperSauce_icon.jpg"
             alt="PepperSauce的頭貼"
-            width="300"
-            height="200"
-            class="rounded-full"
+            width={230}
+            height={200}
+            loading="lazy"
+            class="flex-2 rounded-full"
             />
+            <p class="flex-1 text-white text-xl">
+                <span class="text-2xl">嗨！你好，我是 <span class="text-green-300">PepperSauce</span>，你也可以叫我胡椒。</span>
+                <br>
+                <br>
+                • 我的興趣：🚩資訊安全、🖥️程式設計、📑網頁開發、🔒Locking
+                <br>
+                、📖哲學、🎮玩遊戲
+                <br>
+                <br>
+                • 玩的遊戲：Minecraft、Valorant、GTA5、Steam(?
+                <br>
+                <br>
+                <span class="text-gray-300 text-base italic ">若心有所嚮，何懼道阻且長。</span>
+            </p>
         </div>
-
-        <p class="flex-auto text-white text-xl">
-            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
-            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
-            <br>
-            <br>
-            嗨，你好，我是 PepperSauce，你也可以叫我胡椒，我的興趣是學習資訊安全、程式設計、網頁開發等與資訊領域相關的技能。
-            <br>
-            <br>
-            <br>
-            <span class="text-white text-base italic">「若心有所嚮，何懼道阻且長。」</span>
-        </p>
     </section>
 
+
     <!-- 技能栈 -->
-    <div class="flex flex-col items-center">
+    <section class="flex flex-col items-center">
         <p class="text-3xl text-white font-bold mt-24">技術栈</p>
 
-        <section class="grid grid-cols-4 gap-x-10 gap-y-10 mt-8">
+        <div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16">
             <p class="text-white font-bold text-lg text-center">前端開發</p>
             <p class="text-white font-bold text-lg text-center">後端開發</p>
             <p class="text-white font-bold text-lg text-center">遊戲開發</p>
@@ -54,7 +59,7 @@ import { Image } from 'astro:assets';
             <div class="grid grid-cols-2 gap-8 grid-rows-3">
                 <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
 </DefaultWebsite>
