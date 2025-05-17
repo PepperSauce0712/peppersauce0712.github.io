@@ -7,4 +7,19 @@
 }
 .btn--secondary {
     @apply bg-slate-100 text-slate-900;
-}  
+}
+/* Markdown 格式 */
+.line {
+}
+.markdown h1 {
+    @apply text-3xl font-bold text-white py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+}
+.markdown h2 {
+    @apply text-2xl font-bold text-white py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+}
+.markdown h3 {
+    @apply text-xl font-bold text-white py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+}
+.markdown p {
+    @apply text-lg text-white;
+}
