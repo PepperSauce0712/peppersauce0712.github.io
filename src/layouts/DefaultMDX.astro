@@ -30,12 +30,12 @@ const { frontmatter } = Astro.props;
 		  <div class="mx-auto w-1/3 h-32 border-b-2 border-dashed border-neutral-600">
 			<p class="text-4xl text-green-300 mt-12">{frontmatter.title}</p>
 
-			<div class="flex flex-row tag mt-12 gap-x-2">
+			<div class="flex flex-row mt-12 gap-x-2">
 				{frontmatter.tags.map((tag: string) => (
-					<p class="text-base bg-neutral-800 rounded-xl px-2 py-1">{tag}</p>
+					<p class="tag">{tag}</p>
 				))}
 
-				<div class= "text-base bg-neutral-800 rounded-xl px-2 py-1 ml-auto">
+				<div class= "tag ml-auto">
 					<i class="fi fi-rr-clock text-sm mr-1"></i>
 					{frontmatter.pubDate.slice(0, 10)}
 				</div>
@@ -85,12 +85,11 @@ const { frontmatter } = Astro.props;
 		  }
 		</style>
 
+		<!-- JS自動生成TOC-->
 		<script is:inline>
-			// 取得所有的標題
 			const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 			const toc = document.getElementById("toc");
 
-			// 生成目錄
 			headings.forEach((heading) => {
 				const a = document.createElement("a");
 				const li = document.createElement("li");

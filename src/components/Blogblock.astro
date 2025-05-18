@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+interface Props {
+    mdx: string;
+}
+const { mdx } = Astro.props as Props;
+
+const matches = import.meta.glob('../pages/blogs/*.mdx', { eager: true }) as Record<string, { frontmatter: Fronmatter}>;
+const info = matches[`../pages/blogs/${mdx}.mdx`].frontmatter;
+type Fronmatter = {
+    title: string;
+    description: string;
+    pubDate: string;
+    tags: string[];
+    author: string;
+    image: string;
+    layout: string;
+};
+---
+<div class="rounded-lg bg-neutral-800 w-auto p-3">
+    <!-- 時間 -->
+	<div class= "flex flex-row bg-neutral-800 rounded-xl mb-1">
+		<i class="fi fi-rr-clock text-xs mr-1 mt-1"></i>
+        <p class="text-sm">{info.pubDate.slice(0, 10)}</p>
+	</div>
+
+    <!-- 圖片 -->
+    <div id="image" class="rounded-lg w-full h-64">
+        <img src=`${info.image}` class="rounded-lg w-full h-full object-cover" />
+    </div>
+
+    <!-- 文章標題 -->
+    <a href=`/blogs/${mdx}`>
+        <p class="text-2xl text-white font-bold mt-2">{info.title}</p>
+    </a>
+
+    <!-- 文章標籤 -->
+    <div class="flex flex-row mt-1">
+        <div class="flex flex-row gap-x-2">
+            {info.tags.map((tag) => (
+                <p class="tag">{tag}</p>
+            ))}
+        </div>
+
+    </div>
+</div>

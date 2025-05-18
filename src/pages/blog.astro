@@ -1,8 +1,20 @@
 ---
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
+import Blogblock from "../components/Blogblock.astro";
 ---
 <DefaultWebsite pageTitle="PepperSauce | 部落格">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
-    <!-- 部落格 -->
-    <a href="../blogs/whoami">whoami</a>
+    <!-- 精選文章x4 -->
+    <p class="text-3xl text-white font-bold mt-32">精選文章</p>
+    <section class="grid grid-cols-2 w-1/2 h-auto gap-4">
+        <Blogblock mdx="whoami"/>
+        <Blogblock mdx="test1"/>
+        <Blogblock mdx="whoami"/>
+        <Blogblock mdx="whoami"/>
+    </section>
+
+    <!-- 總文章 -->
+    <!-- 標籤選擇 -->
+    
 </DefaultWebsite>
