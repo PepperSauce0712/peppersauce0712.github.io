@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 
     <!-- 自我介紹 -->
     <section class="flex flex-col items-center w-2/5 mt-60">
-        <p class="text-3xl text-white font-bold">自我介紹</p>
+        <h1 class="text-3xl text-white font-bold">自我介紹</h1>
         <div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8">
             <Image
             src="/images/PepperSauce_icon.jpg"
@@ -35,13 +35,16 @@ import { Image } from 'astro:assets';
 
     <!-- 技能栈 -->
     <section class="flex flex-col items-center">
-        <p class="text-3xl text-white font-bold mt-24">技術栈</p>
+        <div class="mt-24 flex flex-col items-center">
+            <h1 class="text-white font-bold text-3xl mb-1">技術棧</h1>
+            <p class="text-neutral-400 text-xl">晚點想</p>
+        </div>
 
         <div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16">
-            <p class="text-white text-lg text-center">前端開發</p>
-            <p class="text-white text-lg text-center">後端開發</p>
-            <p class="text-white text-lg text-center">遊戲開發</p>
-            <p class="text-white text-lg text-center">其他</p>
+            <h2 class="text-white text-lg text-center">前端開發</h2>
+            <h2 class="text-white text-lg text-center">後端開發</h2>
+            <h2 class="text-white text-lg text-center">遊戲開發</h2>
+            <h2 class="text-white text-lg text-center">其他</h2>
             <div class="grid grid-cols-2 gap-8 grid-rows-3">
                 <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
                 <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
@@ -62,7 +65,10 @@ import { Image } from 'astro:assets';
 
     <!-- 作品集 -->
     <section class="flex flex-col items-center">
-        <p class="text-3xl text-white font-bold mt-8">作品集</p>
+        <div class="mt-48 flex flex-col items-center">
+            <h1 class="text-white font-bold text-3xl mb-1">作品集</h1>
+            <p class="text-neutral-400 text-xl">晚點想</p>
+        </div>
     </section>
     
 
