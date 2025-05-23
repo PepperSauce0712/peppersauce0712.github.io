@@ -1,75 +1,86 @@
 ---
 import Logoimage from "../components/Logoimage.astro";
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
+
 <DefaultWebsite pageTitle="PepperSauce | 關於">
+	<!-- 自我介紹 -->
+	<section class="flex flex-col items-center w-2/5 mt-60">
+		<h1 class="text-3xl text-white font-bold">自我介紹</h1>
+		<div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8">
+			<Image
+				src="/images/PepperSauce_icon.jpg"
+				alt="PepperSauce的頭貼"
+				width={230}
+				height={200}
+				loading="lazy"
+				class="flex-2 rounded-full"
+			/>
+			<p class="flex-1 text-white text-xl">
+				<span class="text-2xl"
+					>嗨！你好，我是 <span class="text-green-300">PepperSauce</span
+					>，你也可以叫我胡椒。</span
+				>
+				<br />
+				<br />
+				• 我的興趣：🚩資訊安全、🖥️程式設計、📑網頁開發、🔒Locking、📖哲學、🎮玩遊戲
+				<br />
+				<br />
+				• 玩的遊戲：Minecraft、Valorant、GTA5、Steam(?
+				<br />
+				<br />
+				<span class="text-gray-300 text-base italic"
+					>若心有所嚮，何懼道阻且長。</span
+				>
+			</p>
+		</div>
+	</section>
 
-    <!-- 自我介紹 -->
-    <section class="flex flex-col items-center w-2/5 mt-60">
-        <h1 class="text-3xl text-white font-bold">自我介紹</h1>
-        <div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8">
-            <Image
-            src="/images/PepperSauce_icon.jpg"
-            alt="PepperSauce的頭貼"
-            width={230}
-            height={200}
-            loading="lazy"
-            class="flex-2 rounded-full"
-            />
-            <p class="flex-1 text-white text-xl">
-                <span class="text-2xl">嗨！你好，我是 <span class="text-green-300">PepperSauce</span>，你也可以叫我胡椒。</span>
-                <br>
-                <br>
-                • 我的興趣：🚩資訊安全、🖥️程式設計、📑網頁開發、🔒Locking、📖哲學、🎮玩遊戲
-                <br>
-                <br>
-                • 玩的遊戲：Minecraft、Valorant、GTA5、Steam(?
-                <br>
-                <br>
-                <span class="text-gray-300 text-base italic ">若心有所嚮，何懼道阻且長。</span>
-            </p>
-        </div>
-    </section>
+	<!-- 技能栈 -->
+	<section class="flex flex-col items-center">
+		<div class="mt-24 flex flex-col items-center">
+			<h1 class="text-white font-bold text-3xl mb-1">技術棧</h1>
+			<p class="text-neutral-400 text-xl">晚點想</p>
+		</div>
 
+		<div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16">
+			<h2 class="text-white text-lg text-center">前端開發</h2>
+			<h2 class="text-white text-lg text-center">後端開發</h2>
+			<h2 class="text-white text-lg text-center">遊戲開發</h2>
+			<h2 class="text-white text-lg text-center">其他</h2>
+			<div class="grid grid-cols-2 gap-8 grid-rows-3">
+				<Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro" />
+				<Logoimage
+					icon="/ui_icons/tailwind-css-svgrepo-com.svg"
+					name="Tailwind"
+				/>
+			</div>
+			<div class="grid grid-cols-2 gap-8 grid-rows-3">
+				<Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++" />
+				<Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python" />
+				<Logoimage
+					icon="/ui_icons/javascript-svgrepo-com.svg"
+					name="Javascript"
+				/>
+			</div>
+			<div class="grid grid-cols-2 gap-8 grid-rows-3">
+				<Logoimage
+					icon="/ui_icons/unreal-engine-svgrepo-com.svg"
+					name="Unreal"
+				/>
+			</div>
+			<div class="grid grid-cols-2 gap-8 grid-rows-3">
+				<Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode" />
+			</div>
+		</div>
+	</section>
 
-    <!-- 技能栈 -->
-    <section class="flex flex-col items-center">
-        <div class="mt-24 flex flex-col items-center">
-            <h1 class="text-white font-bold text-3xl mb-1">技術棧</h1>
-            <p class="text-neutral-400 text-xl">晚點想</p>
-        </div>
-
-        <div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16">
-            <h2 class="text-white text-lg text-center">前端開發</h2>
-            <h2 class="text-white text-lg text-center">後端開發</h2>
-            <h2 class="text-white text-lg text-center">遊戲開發</h2>
-            <h2 class="text-white text-lg text-center">其他</h2>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro"></Logoimage>
-                <Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind"></Logoimage>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++"></Logoimage>
-                <Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python"></Logoimage>
-                <Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript"></Logoimage>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal"></Logoimage>
-            </div>
-            <div class="grid grid-cols-2 gap-8 grid-rows-3">
-                <Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode"></Logoimage>
-            </div>
-        </div>
-    </section>
-
-    <!-- 作品集 -->
-    <section class="flex flex-col items-center">
-        <div class="mt-48 flex flex-col items-center">
-            <h1 class="text-white font-bold text-3xl mb-1">作品集</h1>
-            <p class="text-neutral-400 text-xl">晚點想</p>
-        </div>
-    </section>
-    
-
+	<!-- 作品集 -->
+	<section class="flex flex-col items-center">
+		<div class="flex flex-col items-center">
+			<h1 class="text-white font-bold text-3xl mb-1">作品集</h1>
+			<p class="text-neutral-400 text-xl">晚點想</p>
+		</div>
+	</section>
 </DefaultWebsite>

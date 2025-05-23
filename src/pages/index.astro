@@ -1,23 +1,27 @@
 ---
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
+
 <DefaultWebsite pageTitle="PepperSauce | 個人網頁">
-    <!-- 主頁 -->
-    <section class="flex flex-col items-center gap-y-24 p-16 mt-48">
-        <div class="flex flex-col items-center">
-            <Image
-            src="/images/PepperSauce_icon.jpg"
-            alt="PepperSauce的頭貼"
-            width="150"
-            height="150"
-            class="rounded-full outline outline-1 outline-neutral-700 mb-6"
-            />
-            <p class="text-4xl">你好，我是 <span class="text-green-300">PepperSauce</span></p>
-            <p class="text-xl text-neutral-400 mt-1">InfoSec / Programming / Locking</p>
-        </div>
-    </section>
+	<!-- 主頁 -->
+	<section class="flex flex-col items-center gap-y-24 p-16 mt-48">
+		<div class="flex flex-col items-center">
+			<Image
+				src="/images/PepperSauce_icon.jpg"
+				alt="PepperSauce的頭貼"
+				width="150"
+				height="150"
+				class="rounded-full outline outline-1 outline-neutral-700 mb-6"
+			/>
+			<p class="text-4xl">
+				你好，我是 <span class="text-green-300">PepperSauce</span>
+			</p>
+			<p class="text-xl text-neutral-300 mt-2">
+				InfoSec · Programming · Locking
+			</p>
+		</div>
+	</section>
 
-    <!-- 自我介紹 -->
-
+	<!-- 自我介紹 -->
 </DefaultWebsite>
