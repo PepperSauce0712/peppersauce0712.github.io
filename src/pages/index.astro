@@ -1,5 +1,6 @@
 ---
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 ---
 
@@ -21,7 +22,23 @@ import { Image } from "astro:assets";
 				InfoSec · Programming · Locking
 			</p>
 		</div>
-	</section>
 
-	<!-- 自我介紹 -->
+		<div class="flex flex-row gap-x-8">
+			<a
+				href="/about"
+				class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg"
+			>
+				<span class="text-lg font-bold">關於我</span>
+				<Icon name="ion:arrow-forward" class="w-5 h-5 ml-4" />
+			</a>
+
+			<a
+				href="/blog"
+				class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg"
+			>
+				<span class="text-lg font-bold">部落格</span>
+				<Icon name="ion:arrow-forward" class="w-5 h-5 ml-4" />
+			</a>
+		</div>
+	</section>
 </DefaultWebsite>
