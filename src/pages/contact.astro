@@ -10,52 +10,47 @@ import { Icon } from "astro-icon/components";
 		<p class="text-neutral-400 text-xl">更推薦以社群媒體的方式聯絡我喔！</p>
 	</div>
 
-	<form method="post" class="w-1/6 flex flex-col gap-y-8">
-		<div>
-			<label for="name" class="text-xl">稱呼</label>
-			<input
-				type="text"
-				id="name"
-				class="w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2"
-				placeholder="請輸入您的稱呼"
-				required
-			/>
-		</div>
+	<form
+		action="https://formsubmit.co/psauceshan11@gmail.com"
+		method="POST"
+		class="w-1/6 flex flex-col"
+	>
+		<label for="name" class="text-xl">稱呼</label>
+		<input
+			type="text"
+			name="name"
+			class="text-base w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2 mb-8"
+			placeholder="請輸入您的稱呼"
+			required
+		/>
 
-		<div>
-			<label for="email" class="text-xl">電子郵件</label>
-			<input
-				type="text"
-				id="email"
-				class="w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2"
-				placeholder="請輸入您的電子郵件"
-				required
-			/>
-		</div>
+		<label for="email" class="text-xl">電子郵件</label>
+		<input
+			type="email"
+			name="email"
+			class="text-base w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2 mb-8"
+			placeholder="請輸入您的電子郵件"
+			required
+		/>
 
-		<div>
-			<label for="title" class="text-xl">標題</label>
-			<input
-				type="text"
-				id="title"
-				class="w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2"
-				placeholder="請輸入信件標題"
-				required
-			/>
-		</div>
+		<label for="title" class="text-xl">標題</label>
+		<input
+			type="text"
+			name="title"
+			class="text-base w-full bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2 mb-8"
+			placeholder="請輸入信件標題"
+			required
+		/>
 
-		<div>
-			<label for="content" class="text-xl">內文</label>
-			<textarea
-				id="content"
-				class="w-full min-h-48 bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2"
-				placeholder="請輸入信件內文"
-				required></textarea>
-		</div>
+		<label for="content" class="text-xl">內文</label>
+		<textarea
+			name="message"
+			class="text-base w-full min-h-48 bg-neutral-900 border border-neutral-700 rounded-lg text-white p-2 mb-8"
+			placeholder="請輸入信件內文"
+			required></textarea>
 
 		<button
 			type="submit"
-			id="emailSubmit"
 			class="w-full bg-neutral-900 rounded-lg text-white p-2"
 		>
 			發送
