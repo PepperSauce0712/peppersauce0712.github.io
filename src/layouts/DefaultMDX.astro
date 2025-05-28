@@ -1,6 +1,7 @@
 ---
 // layouts/DefaultMDX.astro
 import "../styles/global.css";
+import { Icon } from "astro-icon/components";
 const { frontmatter } = Astro.props;
 ---
 
@@ -9,10 +10,6 @@ const { frontmatter } = Astro.props;
 		<title>{"PepperSauce | " + frontmatter.title}</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-		/>
 		<link rel="icon" href="/images/favicon.ico" />
 	</head>
 
@@ -61,17 +58,17 @@ const { frontmatter } = Astro.props;
 		<!-- 頁尾 -->
 		<footer
 			style="border-top-width: 0.5px; border-color: #717171;"
-			class="h-20 opacity-85 flex justify-evenly items-center mt-4"
+			class="h-20 mt-4 opacity-85 flex justify-evenly items-center"
 		>
 			<div class="flex flex-row gap-6 mt-1">
 				<a href="https://www.instagram.com/po_shan.0611/" target="_blank">
-					<i class="text-white fi fi-brands-instagram text-2xl"></i>
+					<Icon name="simple-icons:instagram" class="text-white text-2xl" />
 				</a>
 				<a href="https://discord.com/users/514774919381516288" target="_blank">
-					<i class="text-white fi fi-brands-discord text-2xl"></i>
+					<Icon name="simple-icons:discord" class="text-white text-2xl" />
 				</a>
 				<a href="https://github.com/PepperSauce0712" target="_blank">
-					<i class="text-white fi fi-brands-github text-2xl"></i>
+					<Icon name="simple-icons:github" class="text-white text-2xl" />
 				</a>
 			</div>
 			<p></p>

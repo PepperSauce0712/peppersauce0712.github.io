@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 
 <DefaultWebsite pageTitle="PepperSauce | 聯絡我">
 	<!-- 寄信表單 -->
-	<div class="mt-48 flex flex-col items-center">
+	<div class="mt-48 flex flex-col items-center first-in">
 		<h1 class="text-white font-bold text-3xl mb-1">聯絡我</h1>
 		<p class="text-neutral-400 text-xl">更推薦以社群媒體的方式聯絡我喔！</p>
 	</div>
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon/components";
 	<form
 		action="https://formsubmit.co/psauceshan11@gmail.com"
 		method="POST"
-		class="w-1/6 flex flex-col"
+		class="w-1/6 flex flex-col second-in"
 	>
 		<label for="name" class="text-xl">稱呼</label>
 		<input
@@ -58,12 +58,12 @@ import { Icon } from "astro-icon/components";
 	</form>
 
 	<!-- 我的社交媒體 -->
-	<div class="mt-16 flex flex-col items-center">
+	<div class="mt-16 flex flex-col items-center first-in">
 		<h1 class="text-white font-bold text-3xl mb-1">社群媒體</h1>
 		<p class="text-neutral-400 text-xl">加好友後請主動說明來意，謝謝你。</p>
 	</div>
 
-	<section class="flex flex-col w-1/6 gap-y-4 mb-48">
+	<section class="flex flex-col w-1/6 gap-y-4 mb-48 second-in">
 		<!-- Instagram -->
 		<div
 			class="w-full h-auto flex flex-row bg-neutral-900 border border-neutral-700 rounded-lg p-3"
@@ -73,14 +73,17 @@ import { Icon } from "astro-icon/components";
 				target="_blank"
 				class="w-1/6 flex justify-center items-center text-3xl mr-3"
 			>
-				<Icon name="simple-icons:instagram" class="text-white text-4xl" />
+				<Icon
+					name="simple-icons:instagram"
+					class="text-white text-4xl hover:opacity-80"
+				/>
 			</a>
 
 			<div class="flex flex-col">
 				<a
 					href="https://www.instagram.com/po_shan.0611/"
 					target="_blank"
-					class="text-xl">Instagram</a
+					class="text-xl hover:opacity-80">Instagram</a
 				>
 				<span class="text-sm text-neutral-400">po_shan.0611</span>
 			</div>
@@ -95,14 +98,17 @@ import { Icon } from "astro-icon/components";
 				target="_blank"
 				class="w-1/6 flex justify-center items-center text-3xl mr-3"
 			>
-				<Icon name="simple-icons:discord" class="text-white text-4xl" />
+				<Icon
+					name="simple-icons:discord"
+					class="text-white text-4xl hover:opacity-80"
+				/>
 			</a>
 
 			<div class="flex flex-col">
 				<a
 					href="https://discord.com/users/514774919381516288"
 					target="_blank"
-					class="text-xl">Discord</a
+					class="text-xl hover:opacity-80">Discord</a
 				>
 				<span class="text-sm text-neutral-400">pepper_sauce</span>
 			</div>

@@ -7,8 +7,8 @@ import { Image } from "astro:assets";
 <DefaultWebsite pageTitle="PepperSauce | 關於">
 	<!-- 自我介紹 -->
 	<section class="flex flex-col items-center w-2/5 mt-60">
-		<h1 class="text-3xl text-white font-bold">自我介紹</h1>
-		<div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8">
+		<h1 class="text-3xl text-white font-bold first-in">自我介紹</h1>
+		<div class="flex flex-row rounded-2xl gap-x-6 w-full p-8 mt-8 second-in">
 			<Image
 				src="/images/PepperSauce_icon.jpg"
 				alt="PepperSauce的頭貼"
@@ -39,12 +39,12 @@ import { Image } from "astro:assets";
 
 	<!-- 技能栈 -->
 	<section class="flex flex-col items-center">
-		<div class="mt-24 flex flex-col items-center">
+		<div class="mt-24 flex flex-col items-center first-in">
 			<h1 class="text-white font-bold text-3xl mb-1">技術棧</h1>
 			<p class="text-neutral-400 text-xl">晚點想</p>
 		</div>
 
-		<div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16">
+		<div class="grid grid-cols-4 gap-x-10 gap-y-10 mt-16 second-in">
 			<h2 class="text-white text-lg text-center">前端開發</h2>
 			<h2 class="text-white text-lg text-center">後端開發</h2>
 			<h2 class="text-white text-lg text-center">遊戲開發</h2>
@@ -78,7 +78,7 @@ import { Image } from "astro:assets";
 
 	<!-- 作品集 -->
 	<section class="flex flex-col items-center">
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center first-in">
 			<h1 class="text-white font-bold text-3xl mb-1">作品集</h1>
 			<p class="text-neutral-400 text-xl">晚點想</p>
 		</div>

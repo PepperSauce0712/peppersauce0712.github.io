@@ -5,7 +5,7 @@
 /* 標籤 */
 
 .tag {
-    @apply bg-neutral-800 rounded-full p-1.5 text-white text-sm border;
+	@apply bg-neutral-800 rounded-full p-1.5 text-white text-sm border;
 }
 
 /* Markdown 格式 */
@@ -13,14 +13,48 @@
 .line {
 }
 .markdown h1 {
-    @apply text-3xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+	@apply text-3xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
 }
 .markdown h2 {
-    @apply text-2xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+	@apply text-2xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
 }
 .markdown h3 {
-    @apply text-xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
+	@apply text-xl font-bold text-blue-200 py-1 mt-10 mb-2 border-b-[1px] border-neutral-600;
 }
 .markdown p {
-    @apply text-lg text-white;
+	@apply text-lg text-white;
+}
+
+/* Hover */
+.link-underline {
+	position: relative;
+	display: inline-block;
+}
+
+.link-underline::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: currentColor;
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
+}
+
+.link-underline:hover::after {
+	width: 100%;
+}
+
+.first-in {
+	@apply animate-in slide-in-from-bottom-12 duration-300;
+}
+
+.second-in {
+	@apply animate-in slide-in-from-bottom-12 duration-500 delay-300;
+}
+
+.third-in {
+	@apply animate-in slide-in-from-bottom-12 duration-500 delay-500;
 }
