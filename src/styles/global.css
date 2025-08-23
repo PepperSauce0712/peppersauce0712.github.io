@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 /* 標籤 */
 
 .tag {
@@ -47,14 +44,3 @@
 	width: 100%;
 }
 
-.first-in {
-	@apply animate-in slide-in-from-bottom-12 duration-300;
-}
-
-.second-in {
-	@apply animate-in slide-in-from-bottom-12 duration-500 delay-300;
-}
-
-.third-in {
-	@apply animate-in slide-in-from-bottom-12 duration-500 delay-500;
-}

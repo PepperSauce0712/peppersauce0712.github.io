@@ -22,16 +22,16 @@ const { pageTitle } = Astro.props;
 			<a href="/" class="text-white text-lg link-underline">PepperSauce</a>
 			<div class="flex items-center justify-evenly gap-5">
 				<a
-					href="/about"
-					class="text-white text-lg link-underline active:to-blue-300">關於</a
+					href="/experience"
+					class="text-white text-lg link-underline active:to-blue-300">經歷</a
 				>
-				<a href="/blog" class="text-white text-lg link-underline">部落格</a>
+				<a href="/portfolio" class="text-white text-lg link-underline">作品集</a>
 				<a href="/contact" class="text-white text-lg link-underline">聯絡</a>
 			</div>
 		</header>
 
 		<!-- 主體 -->
-		<main class="flex flex-col items-center min-h-screen gap-y-16">
+		<main class="flex flex-col items-center min-h-screen">
 			<slot />
 		</main>
 
@@ -68,6 +68,9 @@ const { pageTitle } = Astro.props;
 
 		<!-- 背景 -->
 		<style>
+			html{
+				scroll-behavior: smooth;
+			}
 			body {
 				background-image: linear-gradient(
 						to right,

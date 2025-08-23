@@ -5,10 +5,10 @@ interface Props {
 }
 const { mdx } = Astro.props as Props;
 
-const matches = import.meta.glob("../pages/blogs/*.mdx", {
+const matches = import.meta.glob("../pages/portfolios/*.mdx", {
 	eager: true,
 }) as Record<string, { frontmatter: Fronmatter }>;
-const info = matches[`../pages/blogs/${mdx}.mdx`].frontmatter;
+const info = matches[`../pages/portfolios/${mdx}.mdx`].frontmatter;
 type Fronmatter = {
 	title: string;
 	description: string;
@@ -25,7 +25,7 @@ type Fronmatter = {
 >
 	<div class="flex flex-col">
 		<!-- 文章標題 -->
-		<a href=`/blogs/${mdx}`>
+		<a href=`/portfolios/${mdx}`>
 			<p class="text-2xl text-white font-bold mt-2">{info.title}</p>
 		</a>
 
