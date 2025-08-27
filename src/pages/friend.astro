@@ -1,7 +1,107 @@
 ---
 import DefaultWebsite from "../layouts/DefaultWebsite.astro";
+import { Image } from "astro:assets";
 ---
 
 <DefaultWebsite pageTitle="PepperSauce | 朋友">
+	<section class="w-full flex flex-col items-center mt-12 gap-y-4">
+		<div class="flex flex-col items-center">
+			<h1 class="text-white font-bold text-3xl mb-1">朋友</h1>
+		</div>
 
+		<div id="container" class="relative w-[1250px] h-[1250px]">
+			<svg id="lines" class="absolute w-full h-full"></svg>
+			<a id="siewilly" href="https://siewilly.github.io/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/siewilly.png" alt="siewilly的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">siewilly</p>
+			</a>
+			<a id="匿名用戶9487" href="https://qwo877.github.io/me/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/匿名用戶9487.png" alt="匿名用戶9487的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">匿名用戶9487</p>
+			</a>
+			<a id="小一" href="https://www.instagram.com/littleonechung/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/小一.png" alt="小一的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">小一</p>
+			</a>
+			<a id="Small Z" href="https://yuzen9622.github.io/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/SmallZ.png" alt="Small Z的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">Small Z</p>
+			</a>
+			<a id="喵貓" href="https://www.instagram.com/shooting.twcat?igsh=bzJuaTczMnBxaDRh" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/喵貓.png" alt="喵貓的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">喵貓</p>
+			</a>
+			<a id="鴨鴨" href="https://ya-ya-12.github.io/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/鴨鴨.png" alt="鴨鴨的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">鴨鴨</p>
+			</a>
+			<a id="UmmIt Kin" href="https://l.ummit.dev/" class="absolute friend w-56 h-16 rounded-full bg-neutral-900 overflow-hidden px-2 gap-x-3 flex items-center">
+				<Image src="/images/UmmIt Kin.png" alt="UmmIt Kin的頭貼" width="50" height="50" class="rounded-full" />
+				<p class="text-xl">UmmIt Kin</p>
+			</a>
+		</div>
+
+		<script>
+			const container = document.getElementById("container")!;
+			const containerRect = container.getBoundingClientRect();
+			const friends = Array.from(document.getElementsByClassName("friend")).map((el) => el as HTMLElement);
+			const svg = document.getElementById("lines")!;
+			let stopped_friend: String;
+
+			let lines: SVGLineElement[] = [];
+			for (let i = 0; i < friends.length; i++) {
+				const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+				line.setAttribute("stroke", "white");
+				line.setAttribute("stroke-width", "0.7");
+				svg.appendChild(line);
+				lines.push(line);
+			}
+
+			const speeds = friends.map(() => ({
+				dx: -1.5 + 3 * Math.random(),
+				dy: -1.5 + 3 * Math.random(),
+			}));
+
+			friends.forEach((friend) => {
+				friend.style.top = Math.random() * 900 + "px";
+				friend.style.left = Math.random() * 900 + "px";
+				friend.addEventListener("mouseenter", (event) => {
+					stopped_friend = friend.id as String;
+				});
+				friend.addEventListener("mouseleave", (event) => {
+					stopped_friend = "Nobody";
+				});
+			});
+
+			function animate() {
+				friends.forEach((friend, i) => {
+					let x = parseFloat(friend.style.left);
+					let y = parseFloat(friend.style.top);
+
+					if (friend.id !== stopped_friend) {
+						x += speeds[i].dx;
+						y += speeds[i].dy;
+
+						// 邊界反彈
+						if (x <= 0 || x >= containerRect.width - 224) speeds[i].dx *= -1;
+						if (y <= 0 || y >= containerRect.height - 64) speeds[i].dy *= -1;
+
+						friend.style.left = Math.max(0, Math.min(x, containerRect.width - 224)) + "px";
+						friend.style.top = Math.max(0, Math.min(y, containerRect.height - 64)) + "px";
+					}
+
+					if (i < friends.length - 1) {
+						lines[i].setAttribute("x1", parseFloat(friend.style.left) + 114 + "px");
+						lines[i].setAttribute("y1", parseFloat(friend.style.top) + 32 + "px");
+						lines[i].setAttribute("x2", parseFloat(friends[i + 1].style.left) + 114 + "px");
+						lines[i].setAttribute("y2", parseFloat(friends[i + 1].style.top) + 32 + "px");
+					}
+				});
+
+				requestAnimationFrame(animate);
+			}
+
+			animate();
+		</script>
+	</section>
 </DefaultWebsite>

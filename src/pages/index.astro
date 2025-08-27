@@ -9,34 +9,23 @@ import { Image } from "astro:assets";
 	<!-- 主頁 -->
 	<section class="flex flex-col items-center gap-y-24 h-screen">
 		<div class="mt-60 flex flex-col items-center">
-			<Image
-				src="/images/PepperSauce_icon.jpg"
-				alt="PepperSauce的頭貼"
-				width="150"
-				height="150"
-				class="rounded-full outline outline-1 outline-neutral-700 mb-6"
-			/>
+			<Image src="/images/PepperSauce_icon.jpg" alt="PepperSauce的頭貼" width="150" height="150" class="rounded-full outline-1 outline-neutral-700 mb-6" />
 			<p class="text-4xl">
 				你好，我是 <span class="text-green-300">PepperSauce</span>
 			</p>
 			<p class="text-xl text-neutral-300 mt-2">
-				InfoSec · Programming · Locking
+				<a href="/flag" id="First FLAG in this page!">InfoSec</a>
+				 · Programming · Locking
 			</p>
 		</div>
 
 		<div class="flex flex-row gap-x-8">
-			<a
-				href="/experience"
-				class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg hover:border-white"
-			>
+			<a href="/experience" class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg hover:border-white">
 				<span class="text-lg font-bold">經歷</span>
 				<Icon name="ion:arrow-forward" class="w-5 h-5 ml-4" />
 			</a>
 
-			<a
-				href="/portfolio"
-				class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg hover:border-white"
-			>
+			<a href="/portfolio" class="w-40 h-12 flex flex-row items-center justify-center border bg-neutral-900 border-neutral-700 rounded-lg hover:border-white">
 				<span class="text-lg font-bold">作品集</span>
 				<Icon name="ion:arrow-forward" class="w-5 h-5 ml-4" />
 			</a>
@@ -44,7 +33,6 @@ import { Image } from "astro:assets";
 		<a href="#skill">
 			<Icon name="ion:arrow-down" class="mt-72 w-10 h-10 opacity-70 hover:opacity-100 animate-bounce" />
 		</a>
-		
 	</section>
 
 	<!-- 技能栈 -->
@@ -59,26 +47,17 @@ import { Image } from "astro:assets";
 			<h2 class="text-white text-lg text-center">後端開發</h2>
 			<h2 class="text-white text-lg text-center">遊戲開發</h2>
 			<h2 class="text-white text-lg text-center">其他</h2>
-			<div class="grid grid-cols-2 gap-8 grid-rows-3">
+			<div class="grid grid-cols-2 gap-8 grid-rows-3" id="7M1nd{573">
 				<Logoimage icon="/ui_icons/astro-svgrepo-com.svg" name="Astro" />
-				<Logoimage
-					icon="/ui_icons/tailwind-css-svgrepo-com.svg"
-					name="Tailwind"
-				/>
+				<Logoimage icon="/ui_icons/tailwind-css-svgrepo-com.svg" name="Tailwind" />
 			</div>
 			<div class="grid grid-cols-2 gap-8 grid-rows-3">
 				<Logoimage icon="/ui_icons/cpp-svgrepo-com.svg" name="C++" />
 				<Logoimage icon="/ui_icons/python-127-svgrepo-com.svg" name="Python" />
-				<Logoimage
-					icon="/ui_icons/javascript-svgrepo-com.svg"
-					name="Javascript"
-				/>
+				<Logoimage icon="/ui_icons/javascript-svgrepo-com.svg" name="Javascript" />
 			</div>
 			<div class="grid grid-cols-2 gap-8 grid-rows-3">
-				<Logoimage
-					icon="/ui_icons/unreal-engine-svgrepo-com.svg"
-					name="Unreal"
-				/>
+				<Logoimage icon="/ui_icons/unreal-engine-svgrepo-com.svg" name="Unreal" />
 			</div>
 			<div class="grid grid-cols-2 gap-8 grid-rows-3">
 				<Logoimage icon="/ui_icons/vscode-svgrepo-com.svg" name="Vscode" />
